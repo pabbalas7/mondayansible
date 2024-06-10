@@ -2,9 +2,9 @@
   hosts: catalogue
   become: yes
   tasks:
-  - name: disable oldnodejs & enable nodejs
-    ansible.builtin.shell: disable nodejs -y ; enable nodejs:18 -y
-    
+  - name: disable old nodejs and enable nodejs
+    ansible.builtin.shell: dnf module disable nodejs -y ; dnf module enable nodejs:18 -y
+
   - name: Install nodejs
     ansible.builtin.dnf:
      name: nodejs
