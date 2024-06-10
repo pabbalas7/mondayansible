@@ -6,11 +6,11 @@
     ansible.builtin.copy:
       src: mongodb.repo
       dest: /etc/yum.repos.d/mongodb.repo
-      
+
   - name: Install mongodb
-    ansible.bulitin.package:
-     name: mongodb-org
-     state: present
+    ansible.builtin.package:
+      name: mongodb-org
+      state: present
 
   - name: start and enable mongod
     ansible.builtin.service:
