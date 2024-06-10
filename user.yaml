@@ -1,5 +1,5 @@
-- name: web
-  hosts: web
+- name: user
+  hosts: user
   become: yes
   tasks:
   - name: disable old nodejs and enable nodejs
