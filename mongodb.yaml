@@ -3,11 +3,11 @@
   become: yes
   tasks:
   - name: copy mongodb repo
-    ansible.bulit.copy:
+    ansible.bulitin.copy:
      src: mongodb.repo
      dest: /etc/yum.repos.d/mongodb.repo
   - name: install mongodb
-    ansible.bulit.package:
+    ansible.bulitin.package:
      name: mongodb-org
      state: present
   - name: start and enable mongod
